@@ -45,7 +45,7 @@ if choice == "Lightning" or choice == "lightning":
             elif choice >=7 and choice <= 9:
                 print("You are rewarded with bragging rights. Return to base and let your commrades bask in all your glory.")
                 print("------------------------------------")
-            # THIS CODE WORKS TOO BUT IS CONFUSING AF TO READ
+            # THIS CODE WORKS TOO BUT IS CONFUSING TO READ
             # elif choice <= 6 >4:
             #     print("You gain the strength of your enemy. Return to base and let your commrades bask in all your glory.")
             # elif choice <= 9 >7:
