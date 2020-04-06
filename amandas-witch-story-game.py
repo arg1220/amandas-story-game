@@ -58,6 +58,10 @@ if choice == "Lightning" or choice == "lightning":
                     typewriter(f"His health is now at {enemy_health}")
                     print("------------------------------------")
                     #write code here to simulate taking damage from the enemy
+                    hurt = random.choice(damage)
+                    health = health - hurt
+                    typewriter(f"Your enemy strikes you for {hurt} damage.")
+                    typewriter(f"• Your health is now {health}")
                 if enemy_health <= 0:
                     typewriter("You've successfully defeated your opponent.")
                     typewriter("You are rewarded with loot from his person.")
