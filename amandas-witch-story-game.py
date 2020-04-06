@@ -35,13 +35,6 @@ if choice == "Lightning" or choice == "lightning":
         health = health - 5
         typewriter(f"• Your health is now at {health}")
         print("------------------------------------")
-        # typewriter("Realizing the dilemma of using your special attack, you realize you must either")
-        # choice = input("unleash another attack to finish him off or run away. What will you do? (Run/Fight)")
-        # print("------------------------------------")
-        # if choice == "Run" or choice == "run":
-        #         typewriter("You narrowly escape another spell attack as you run away. You've gotten away unscathed,") 
-        #         typewriter("but your actions have consequences and have ranked you in the lower quartile in the Legion.")
-        #         typewriter("You must now return to your faction's headquarters and discuss your actions with your Captain.")
         while health > 0 and enemy_health > 0:
             choice = input("What would you like to do next? Unleash another attack or run away? (Run/Fight)")
             print("------------------------------------")
