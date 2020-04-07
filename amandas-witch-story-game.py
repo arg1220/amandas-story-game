@@ -6,7 +6,7 @@ def typewriter(str):
     for x in str:
         print(x, end='')
         sys.stdout.flush()
-        sleep(0.04)
+        sleep(0.03)
     print('')
 
 game_over = False
