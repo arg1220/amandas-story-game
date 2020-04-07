@@ -12,6 +12,9 @@ def typewriter(str):
 
 health = 100
 damage = [5, 10, 20, 25, 40, 50, 60, 75, 80, 100]
+addl_attack = ["What would you like to do next?", "Stand your ground or run away?"] 
+
+
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 typewriter("You've been drafted to join the Legion of Witches")
 choice = input("What is your chosen power? (Lightning or Fire?)")
@@ -36,7 +39,8 @@ if choice == "Lightning" or choice == "lightning":
         typewriter(f"• Your health is now at {health}")
         print("------------------------------------")
         while health > 0 and enemy_health > 0:
-            choice = input("What would you like to do next? Unleash another attack or run away? (Run/Fight)")
+            nextAttack = random.choice(addl_attack)
+            choice = input(f"{nextAttack}(Run/Fight)")
             print("------------------------------------")
             if choice == "Run" or choice == "run":
                     typewriter("You narrowly escape another spell attack as you run away. You've gotten away unscathed,") 
