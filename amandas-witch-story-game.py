@@ -9,9 +9,9 @@ def typewriter(str):
         sleep(0.04)
     print('')
 
-
+game_over = False
 health = 100
-damage = [5, 10, 20, 25, 40, 50, 60, 75, 80, 100]
+damage = [5, 10, 20, 25, 40, 50]
 addl_attack = ["What would you like to do next?", "Stand your ground or run away?"] 
 
 
@@ -34,11 +34,12 @@ if choice == "Lightning" or choice == "lightning":
         typewriter("You have gained a special ability called Jupiter's Wrath.")
         typewriter("Attacking your opponents at lightning speed, you are cunning yet somewhat clumsy and ")
         typewriter("hurt yourself during your special attack.")
-        typewriter("His health has dropped significantly, but his Water Spear attack grazes your leg and you lose 5 health total.")
+        print("------------------------------------")
+        typewriter("Your opponent's health has dropped significantly, but his Water Spear attack grazes your leg and you lose 5 health total.")
         health = health - 5
         typewriter(f"• Your health is now at {health}")
         print("------------------------------------")
-        while health > 0 and enemy_health > 0:
+        while health > 0 and game_over == False and enemy_health > 0:
             nextAttack = random.choice(addl_attack)
             choice = input(f"{nextAttack}(Run/Fight)")
             print("------------------------------------")
@@ -46,6 +47,7 @@ if choice == "Lightning" or choice == "lightning":
                     typewriter("You narrowly escape another spell attack as you run away. You've gotten away unscathed,") 
                     typewriter("but your actions have consequences and have ranked you in the lower quartile in the Legion.")
                     typewriter("You must now return to your faction's headquarters and discuss your actions with your Captain.")
+                    game_over = True
             elif choice == "Fight" or choice == "fight":
         # Provide additional scenarios here to keep the loop going
                 attack = random.choice(damage)
