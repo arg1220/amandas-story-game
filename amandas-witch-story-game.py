@@ -10,6 +10,7 @@ def typewriter(str):
     print('')
 
 game_over = False
+#health set at low value for testing purposes
 health = 10
 damage = [5, 10, 20, 25, 40, 50]
 addl_attack = ["What would you like to do next?", "Stand your ground or run away?"] 
